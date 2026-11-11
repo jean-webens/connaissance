@@ -1,0 +1,20 @@
+# Netlify — publie le dossier public/ (déjà compilé). Aucune configuration de serveur requise.
+[build]
+  publish = "public"
+  command = "npm ci && npm run build"
+
+[[headers]]
+  for = "/service-worker.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

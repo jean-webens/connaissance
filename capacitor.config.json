@@ -1,0 +1,6 @@
+{
+  "appId": "com.connaissanceplus.app",
+  "appName": "Connaissance+",
+  "webDir": "public",
+  "server": { "androidScheme": "https" }
+}
